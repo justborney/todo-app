@@ -13,7 +13,7 @@
         <div v-if="goods.count">x{{ goods.count }}</div>
         <div v-else>x1</div>
 
-        <button class="button-add" @click="deleteg(goods)">
+        <button class="button-add" @click="deleteGoods(goods)">
           Удалить
         </button>
       </div>
@@ -40,7 +40,7 @@ export default {
   },
 
   methods: {
-    deleteg(goods) {
+    deleteGoods(goods) {
       this.$store.commit('deleteGoods', goods)
     }
   }
